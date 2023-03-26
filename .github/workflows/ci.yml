@@ -12,3 +12,10 @@ jobs:
 
       - name: Build and test artifacts
         run: scripts/build_and_test_jars.sh
+
+      - name: Upload playwright report
+        uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: playwright-report
+          path: playwright-report/
