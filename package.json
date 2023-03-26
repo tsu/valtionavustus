@@ -72,7 +72,7 @@
   },
   "private": false,
   "scripts": {
-    "playwright:test": "playwright test --config=playwright/playwright.config.ts",
+    "playwright:test": "playwright test --config=playwright/playwright.config.ts playwright/tests/emails.test.ts",
     "build": "webpack",
     "build-production": "NODE_ENV=production npm run build",
     "build-watch": "webpack --progress --watch",

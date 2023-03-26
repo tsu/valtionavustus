@@ -24,7 +24,8 @@ function playwright_test_runner_exit_code {
 
 function main {
   init_nodejs
-  run_tests "$@"
+  start-service test-runner
+  return $(playwright_test_runner_exit_code)
 }
 
 main "$@"
